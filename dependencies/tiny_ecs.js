@@ -239,7 +239,7 @@ var ObjectPool = function(objectConstructor) {
 ObjectPool.prototype.aquire = function() {
     //Grow the list by 20%ish if we're out
     if(this.freeList.length <= 0) {
-        this.expand(round(this.count * 0.2) + 1);
+        this.expand(Math.round(this.count * 0.2) + 1);
     }
     
     var item = this.freeList.pop();
