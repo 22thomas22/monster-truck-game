@@ -1,7 +1,5 @@
-function draw(ctx) {
-    var toDraw = entities.queryComponent(Renderable);
-
-    for(var i = 0; i < toDraw.length; i++) {
-        toDraw.renderable.draw(ctx, toDraw.renderable.drawParams);
-    }
+function render(entities, ctx) {
+    entities.queryComponents([Renderable]).forEach(renderable => {
+        renderable.renderable.draw(ctx, renderable.renderable.drawParams);
+    });
 }
