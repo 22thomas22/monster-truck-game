@@ -137,7 +137,7 @@ Event.prototype.fire = function(eventName, entity, option) {
  */
 Event.prototype.whereEntityIs = function(entity) {
     if(this.entity) {
-        throw new Error("Cannot call whereEntity twice");
+        throw new Error("Cannot call whereEntityIs twice");
     }
     
     this.entity = entity;
