@@ -133,3 +133,15 @@ var stepSpeed = 1 / 30;
 setInterval(function() {
     updateWorlds(entities, stepSpeed);
 }, 1 / 30);
+
+mousePressed = function() {
+    debugMousePressed(world, mouseX, mouseY, 0, 0, box2dscale);
+};
+
+mouseDragged = function() {
+    debugMouseDragged(world, mouseX, mouseY, 0, 0, box2dscale);
+};
+
+mouseReleased = function() {
+    debugMouseReleased(world);
+};
